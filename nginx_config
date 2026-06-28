@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name 13.206.237.47;
+
+    root /var/www/static-app;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    access_log /var/log/nginx/static-app.access.log;
+    error_log /var/log/nginx/static-app.error.log;
+}
