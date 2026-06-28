@@ -12,7 +12,7 @@ else:
     command = "sudo apt update && sudoapt install -y nginx"
     run(command)
 
- mv ./nginx.conf /etc/nginx/sites-available/bujji-app")
+run("sudo mv ./nginx.conf /etc/nginx/sites-available/bujji-app")
 run("sudo ln -sf /etc/nginx/sites-available/bujji-app /etc/nginx/sites-enabled/bujji-app")
 run("sudo rm -f /etc/nginx/sites-enabled/default")
 
